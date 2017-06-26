@@ -1,2 +1,102 @@
 # PlayDashboard
 난생처음 DashBoard 노는 것 처럼 만들어 봅시다 
+
+
+
+### 기획
+
+
+
+
+
+### 스케줄 
+
+<details>
+
+<summary> 06 23 </summary>
+
+자료 분석 및 기획 
+
+데이터 시각화 라이브러리 알아보기 및 공부D3
+
+자료 토대로 챠트 및 table 그려보기 우선 기능 구현 만 
+
+깃 -develop- commit관리 잘 적용해보기 ! 
+
+</details>
+
+<details>
+
+<summary> 06 24 </summary>
+
+</details>
+
+<details>
+
+<summary> 06 23 </summary>
+
+</details>
+
+<details>
+
+<summary> 06 23 </summary>
+
+</details>
+
+<details>
+
+<summary> 06 23 </summary>
+
+</details>
+
+<details>
+
+<summary> 06 23 </summary>
+
+</details>
+
+<details>
+
+<summary> 06 23 </summary>
+
+</details>
+
+
+
+
+
+## 기능 
+
+<details>
+
+<summary> 사용자 통계 DashBoard Site 개발</summary>
+
+기능 
+
++ 총 가입자 지표 ,활성 사용자 지표 등을 그래프와 테이블로 표현 
++ 탈퇴자 계산 적용 
++ 역할 별 그래프 표현
++  최대/최소 평균 값 표현 
++  필터 기능 range ,role country 
++ 추가 기능 집어 넣기 ex) 파일로 변환 다운로드  , 스타일 세팅 
+
+데이터 시각화 라이브러리 사용하기 !
+
+데이터 시각화 라이브러리 찾아보기 
+
+관련 디자인 찾기 
+
+</details>
+
+### 일정
+
+17.06.23~17.06.28
+
+
+
+### 사용할 도구들
+
+Html, css, Javacript, Vue.js, Webpac, Sass,   
+
+
+

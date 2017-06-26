@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="demo.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+</head>
+<body class="home">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+  <!-- Additional files for the Highslide popup effect -->
+  <script src="https://www.highcharts.com/media/com_demo/js/highslide-full.min.js"></script>
+  <script src="https://www.highcharts.com/media/com_demo/js/highslide.config.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="https://www.highcharts.com/media/com_demo/css/highslide.css" />
+
+  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+</body>
+<script>
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+$(document).ready(function() {
+
+    var options = {
+        chart: {
+            renderTo: 'container',
+            type: 'spline'
+        },
+        title: {
+            text: 'Daily New User'
+        },
+
+        subtitle: {
+            text: ' 2017-05-09 ~2017-06-08'
+        },
+        yAxis: {
+              title: {
+                  text: 'Number of new Users'
+              }
+          },
+        xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: { // don't display the dummy year
+                month: '%e. %b',
+                year: '%b'
+            },
+            title: {
+                  text: 'Date'
+              }
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'middle'
+          },
+        tooltip: {
+        headerFormat: '<b>{series.name}</b><br>',
+        pointFormat: '{point.x}: {point.y}명'
+    },
+
+    plotOptions: {
+      series: {
+         allowPointSelect: true
+       }
+    },
+
+        series: [{},{},{}]
+    };
+
+//함수화 시키기
+
+// function seriesSetFile(filePath, fileName){
+//
+// }
+
+    $.getJSON('/data/user_signedup.json', function(data) {
+
+        options.series[0].name = "NewUser"
+        options.series[0].data =[];
+        data.forEach(function(item){
+          options.series[0].data.push(item.doc_count)
+        })
+        console.log("시리즈", options.series);
+        var chart = new Highcharts.Chart(options);
+
+
+
+    });
+    $.getJSON('/data/user_deleted.json', function(data) {
+      options.series[1].name = "leaveUser"
+      options.series[1].data =[];
+      data.forEach(function(item){
+        options.series[1].data.push(item.doc_count)
+      })
+        var chart = new Highcharts.Chart(options);
+    });
+
+
+});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////$AV_A
+//    그리기
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////$AV_A
+
+
+
+
+
+    // plotOptions: {
+    //     series: {
+    //         pointStart: 2010
+    //     }
+    // },
+
+
+
+</script>
+</html>

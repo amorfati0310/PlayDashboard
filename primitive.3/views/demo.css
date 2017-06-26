@@ -1,5 +1,69 @@
 /*Main CSS*/
 
+/*svg*/
+#chart{
+	background-color: #FFF;
+	border: 1px solid #CCC;
+  width: 900px;
+  height: 600px;
+}
+
+.line-chart{
+  background-color: #ececec;
+
+}
+.trendline{
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 4px;
+}
+.area {
+  opacity: 0.25;
+  fill: #ccc;
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+
+
+
+body,html{
+	margin: 0;
+	padding: 0;
+	font-family: "Arial", sans-serif;
+	font-size: 0.95em;
+	text-align: center;
+}
+
+.bar{
+	fill: purple;
+	shape-rendering: crispEdges;
+}
+.bar-label{
+	fill: black;
+	text-anchor: middle;
+	font-size: 18px;
+}
+.axis path,
+.axis line{
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+.gridline path,
+.gridline line{
+	fill: none;
+	stroke: #ccc;
+	shape-rendering: crispEdges;
+}
+
+
+
+
+
+
+
+
+
 
 /*Login Signup Page*/
 a:focus,a:hover,a{
