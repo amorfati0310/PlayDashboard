@@ -89,7 +89,7 @@
                         <a href="/" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Daily New User</a>
                     </li>
                     <li style="padding: 70px 0 0;">
-                        <a href="/" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Active User</a>
+                        <a href="/" class="waves-effect active-user-link"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Active User</a>
                     </li>
                     <!-- <li>
                         <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
@@ -130,7 +130,7 @@
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- Daily New User -->
-                <div class="row">
+                <div class="row new-user-active">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
                             <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
@@ -140,7 +140,7 @@
                 <!-- ============================================================== -->
                 <!-- table -->
                 <!-- ============================================================== -->
-                <div class="row">
+                <div class="row new-user-active">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                           <button class="btn show-table-btn">Show Table</button>
@@ -153,20 +153,45 @@
                 <!-- ============================================================== -->
                 <!-- chat-listing & recent comments -->
                 <!-- ============================================================== -->
+
                 <div class="row">
                     <!-- .col -->
                     <div class="col-md-12 col-lg-8 col-sm-12">
                         <div class="white-box">
-
+                              <div id="dauList"></div>
                         </div>
                     </div>
 
 
                     <!-- /.col -->
                 </div>
+                <div class="row">
+                    <!-- .col -->
+                    <div class="col-md-12 col-lg-8 col-sm-12">
+                        <div class="white-box">
+                              <div id="wauList"></div>
+                        </div>
+                    </div>
+
+
+                    <!-- /.col -->
+                </div>
+                <div class="row">
+                    <!-- .col -->
+                    <div class="col-md-12 col-lg-8 col-sm-12">
+                        <div class="white-box">
+                              <div id="mauList"></div>
+                        </div>
+                    </div>
+
+
+                    <!-- /.col -->
+                </div>
+
+
             </div>
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by wrappixel.com </footer>
+            <footer class="footer text-center"> 2017 Play:DashBoard &copy;  </footer>
         </div>
         <!-- ============================================================== -->
         <!-- End Page Content -->
@@ -215,7 +240,9 @@
 
 
     <script src="../app/js/addeduser-linechart.js" async></script>
-
+    <script src="../app/js/daily-active-user.js" async></script>
+    <script src="../app/js/weekly-active-user.js" async></script>
+    <script src="../app/js/monthly-active-user.js" async></script>
     <!--챠트 영역 html  -->
 
     <!-- <script src="addeduser-linechart.js" async></script>   -->

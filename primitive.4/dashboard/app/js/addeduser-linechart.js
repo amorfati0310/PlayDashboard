@@ -110,6 +110,8 @@ SubLineChart('/data/user_signedup.json', '/data/user_deleted.json', 2, "TotalAdd
 // 빼는 거 프로미스를 해야 될 텐데 .//
 
 
+
+
 Highcharts.drawTable = function() {
 
 console.log("이거 실행 됬나?.........");
