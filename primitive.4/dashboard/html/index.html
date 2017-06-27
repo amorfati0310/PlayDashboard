@@ -26,12 +26,8 @@
     <link href="../html/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="../html/css/colors/default.css" id="theme" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+
+
 </head>
 
 <body class="fix-header">
@@ -91,24 +87,7 @@
                     <li style="padding: 70px 0 0;">
                         <a href="/" class="waves-effect active-user-link"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Active User</a>
                     </li>
-                    <!-- <li>
-                        <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
-                    </li> -->
-                    <!-- <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Basic Table</a>
-                    </li>
-                    <li>
-                        <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Icons</a>
-                    </li>
-                    <li>
-                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Google Map</a>
-                    </li>
-                    <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>Error 404</a>
-                    </li>  -->
+
 
                 </ul>
 
@@ -143,51 +122,69 @@
                 <div class="row new-user-active">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
-                          <button class="btn show-table-btn">Show Table</button>
+                          <button class="btn show-table-btn">Show Daily User Table</button>
 
                             <div id="datatable" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
                         </div>
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- chat-listing & recent comments -->
-                <!-- ============================================================== -->
-
+                <!-- Daily Active User -->
                 <div class="row">
                     <!-- .col -->
-                    <div class="col-md-12 col-lg-8 col-sm-12">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                               <div id="dauList"></div>
                         </div>
                     </div>
 
-
-                    <!-- /.col -->
                 </div>
+                  <!-- Daily Active User Table -->
+                <div class="row new-user-active">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <button class="btn show-dau-btn">Show Dau Table</button>
+                            <div id="dau-table"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- WAU -->
                 <div class="row">
                     <!-- .col -->
-                    <div class="col-md-12 col-lg-8 col-sm-12">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                               <div id="wauList"></div>
                         </div>
                     </div>
+                <div class="row">
+                    <!-- .col -->
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                          <button class="btn show-wau-btn">Show wau Table</button>
+                              <div id="wau-table"></div>
+                        </div>
+                </div>
 
 
                     <!-- /.col -->
                 </div>
                 <div class="row">
                     <!-- .col -->
-                    <div class="col-md-12 col-lg-8 col-sm-12">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
                               <div id="mauList"></div>
                         </div>
                     </div>
-
-
-                    <!-- /.col -->
                 </div>
-
+                <div class="row">
+                    <!-- .col -->
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                          <button class="btn show-mau-btn">Show mau Table</button>
+                              <div id="mau-table"></div>
+                        </div>
+                </div>
 
             </div>
             <!-- /.container-fluid -->

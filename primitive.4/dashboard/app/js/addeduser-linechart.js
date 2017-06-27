@@ -114,7 +114,7 @@ SubLineChart('/data/user_signedup.json', '/data/user_deleted.json', 2, "TotalAdd
 
 Highcharts.drawTable = function() {
 
-console.log("이거 실행 됬나?.........");
+// console.log("이거 실행 됬나?.........");
    // user options
    var tableTop = 30,
        colWidth = 100,

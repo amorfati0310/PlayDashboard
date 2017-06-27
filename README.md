@@ -13,7 +13,7 @@
 
 <details>
 
-<summary> 06 23 </summary>
+<summary> 06 24 </summary>
 
 자료 분석 및 기획 
 
@@ -27,19 +27,29 @@
 
 <details>
 
-<summary> 06 24 </summary>
+<summary> 06 25 </summary>
+
+라이브러리 Highcharts를 이용해서 데이터 시각화 
+
+d3-> HighCharts로 변경한 이유, 사용성이 더 편하고, 
+
+기본적으로 선택, 필터링 포인트 툴 팁 ,이미지 다운로드등 
+
+기본 기능 설정이 용이하기 때문에 
 
 </details>
 
 <details>
 
-<summary> 06 23 </summary>
+<summary> 06 26 </summary>
 
 </details>
 
 <details>
 
-<summary> 06 23 </summary>
+<summary> 06 27 </summary>
+
+
 
 </details>
 
@@ -76,8 +86,8 @@
 + 총 가입자 지표 ,활성 사용자 지표 등을 그래프와 테이블로 표현 
 + 탈퇴자 계산 적용 
 + 역할 별 그래프 표현
-+  최대/최소 평균 값 표현 
-+  필터 기능 range ,role country 
++ 최대/최소 평균 값 표현 
++ 필터 기능 range ,role country 
 + 추가 기능 집어 넣기 ex) 파일로 변환 다운로드  , 스타일 세팅 
 
 데이터 시각화 라이브러리 사용하기 !
