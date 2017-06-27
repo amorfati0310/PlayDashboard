@@ -4,17 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Play DashBoard version 1</title>
+  <title>Document</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!--Icons-->
-
+  <link rel="stylesheet" href="demo.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 </head>
 <body class="home">
-
-
-
-
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -27,13 +22,26 @@
   <link rel="stylesheet" type="text/css" href="https://www.highcharts.com/media/com_demo/css/highslide.css" />
 
   <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  <div id="active" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
-  <script src="app/js/addeduser-linechart.js" async></script>
-  <!-- <script src="addeduser-linechart.js" async></script>   -->
-  <div id="datatable" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+
+
+  <canvas id="myChart" width="400" height="400"></canvas>
 </body>
 <script>
+
+
+
+
+var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: options
+});
+
 
 
 
