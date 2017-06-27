@@ -1,5 +1,8 @@
 
+
 $(document).ready(function() {
+
+
     var options = {
         chart: {
             renderTo: 'container',
@@ -79,11 +82,31 @@ console.log(bus);
   ChangeSeriesColor(1,"#c43a16");
   ChangeSeriesColor(2,"#3bd4d4");
 
+//
+function SubLineChart(jsonfilePath, jsonfilePath2, i, seriesName){
+  options.series[i].name = seriesName
+  options.series[i].data =[];
+    $.getJSON(jsonfilePath, function(data) {
+      data.forEach(function(item){
+      options.series[i].data.push({name:item.key_as_string,y:item.doc_count})
+    })
+  })
+    $.getJSON(jsonfilePath2, function(data) {
+      data.forEach(function(item,index){
+      options.series[i].data[index].y -= item.doc_count
+    })
+    var chart = new Highcharts.Chart(options);
+
+  })
+}
+
+
+
 // 라인 챠트 그리기
 drawLineChart('/data/user_signedup.json', 0, "NewUser");
 drawLineChart('/data/user_deleted.json', 1, "LeaveUser");
-drawLineChart('/data/user_signedup.json', 2, "TotalAddedUser")
-
+// drawLineChart('/data/user_signedup.json', 2, "TotalAddedUser")
+SubLineChart('/data/user_signedup.json', '/data/user_deleted.json', 2, "TotalAddedUser");
 // 빼는 거 프로미스를 해야 될 텐데 .//
 
 
@@ -91,17 +114,17 @@ Highcharts.drawTable = function() {
 
 console.log("이거 실행 됬나?.........");
    // user options
-   var tableTop = 300,
+   var tableTop = 30,
        colWidth = 100,
-       tableLeft = 20,
-       rowHeight = 20,
+       tableLeft = 30,
+       rowHeight = 30,
        cellPadding = 2.5,
        valueDecimals = 1,
        valueSuffix = ' 명';
 
    // internal variables
    var chart = this,
-       series = chart.series;
+       series = bus,
        renderer = chart.renderer,
        cellLeft = tableLeft;
 
@@ -234,8 +257,7 @@ var table_options = {
       events: {
           load: Highcharts.drawTable
       },
-      type: 'column',
-      borderWidth: 1
+      borderWidth: 2
   },
 
   title: {
@@ -247,7 +269,7 @@ var table_options = {
   },
   yAxis: {
         title: {
-            text: 'Number of new Users'
+            text: 'Number of new Users table'
         }
     },
     xAxis: {
@@ -256,29 +278,32 @@ var table_options = {
   legend: {
       y: -300
   },
-
-  series: [{},{},{}]
 };
 
-function drawTableChart(jsonfilePath, i, seriesName){
-    $.getJSON(jsonfilePath, function(data) {
 
-    table_options.series[i].name = seriesName
-    table_options.series[i].data =[];
-    data.forEach(function(item){
-      table_options.series[i].data.push({name:item.key_as_string,y:item.doc_count})
-    })
+// $('#container').change(function(){
+// var chart = new Highcharts.Chart(table_options);
+// })
+//이 부분 어떻게 처리해야 될지 ... bus의 길이가 있으면
+
+// function drawTableChart(jsonfilePath, i, seriesName){
+//     $.getJSON(jsonfilePath, function(data) {
+//     })
+//     var chart = new Highcharts.Chart(table_options);
+// });
+// }
+
+
+//
+// drawTableChart('/data/user_signedup.json', 0, "NewUser");
+// drawTableChart('/data/user_deleted.json', 1, "LeaveUser");
+// drawTableChart('/data/user_signedup.json', 2, "TotalAddedUser")
+var lineChart = document.querySelector('#container');
+console.log(lineChart);
+// 테이블 버튼 만들어서 클릭하면 보여주도록
+lineChart.addEventListener("click",function(){
     var chart = new Highcharts.Chart(table_options);
-});
-}
-
-
-
-drawTableChart('/data/user_signedup.json', 0, "NewUser");
-drawTableChart('/data/user_deleted.json', 1, "LeaveUser");
-drawTableChart('/data/user_signedup.json', 2, "TotalAddedUser")
-
-
+})
 
 
 
