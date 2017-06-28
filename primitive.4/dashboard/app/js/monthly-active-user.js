@@ -14,7 +14,7 @@ $(document).ready(function() {
         },
 
         subtitle: {
-            text: ' 2017-05-02 ~2017-06-08'
+            text: ' 2017-05-09 ~2017-06-08'
         },
         yAxis: {
               title: {

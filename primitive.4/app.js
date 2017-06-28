@@ -11,6 +11,9 @@ app.get('/', function(req,res){
   res.sendFile(__dirname+"/dashboard/html/index.html")
 })
 
+app.get('/active', function(req,res){
+  res.sendFile(__dirname+"/dashboard/html/active.html")
+})
 
 
 //static파일

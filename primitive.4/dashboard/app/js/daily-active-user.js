@@ -94,7 +94,7 @@ $(document).ready(function() {
 
     Highcharts.drawTable = function() {
 
-  
+
        var tableTop = 30,
            colWidth = 100,
            tableLeft = 30,
@@ -266,7 +266,9 @@ $(document).ready(function() {
     console.log(showDauTable);
     // 테이블 버튼 만들어서 클릭하면 보여주도록
     showDauTable.addEventListener("click",function(){
+      // showDauTable.insertAdjacentHTML('afterend', `<button class="btn on-table">▼</button>`);
         var chart = new Highcharts.Chart(dau_table_options);
+
     })
 
 
