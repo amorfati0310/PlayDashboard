@@ -53,23 +53,7 @@ d3-> HighCharts로 변경한 이유, 사용성이 더 편하고,
 
 </details>
 
-<details>
 
-<summary> 06 23 </summary>
-
-</details>
-
-<details>
-
-<summary> 06 23 </summary>
-
-</details>
-
-<details>
-
-<summary> 06 23 </summary>
-
-</details>
 
 
 
@@ -100,7 +84,7 @@ d3-> HighCharts로 변경한 이유, 사용성이 더 편하고,
 
 ### 일정
 
-17.06.23~17.06.28
+17.06.24~17.06.28
 
 
 
@@ -110,3 +94,9 @@ Html, css, Javacript, Vue.js, Webpac, Sass,
 
 
 
+### 이슈 
+
++ Table 은 클릭으로 데이터를 불러오는 점과 여기서 데이터를 뿌릴 떄 전체 데이터가 들어오지 못 하고 크기 때문인지 짤려서 들어오는 문제점
++ 분류 기능 , range 기능을 추가하지 못한 점 ! 
++ 닥쳐서 과제를 하다 보니.. 기능 구현 및 코드가 좋지 못하다.
++  뷰, 사스 웹팩 등 적용을 하나도 못했다...
